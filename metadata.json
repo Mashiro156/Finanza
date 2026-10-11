@@ -1,0 +1,6 @@
+{
+  "name": "Finanza - Gestion Financière & Budget",
+  "description": "Application intuitive de gestion financière pour enregistrer entrées et sorties d'argent et visualiser son budget mensuel avec des graphiques clairs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

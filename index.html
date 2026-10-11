@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Finanza - Gestion Financière & Budget</title>
+    <meta name="description" content="Application intuitive de gestion financière pour enregistrer entrées et sorties d'argent et visualiser son budget mensuel avec des graphiques clairs." />
+    <meta property="og:title" content="Finanza - Gestion Financière & Budget" />
+    <meta property="og:description" content="Application intuitive de gestion financière pour enregistrer entrées et sorties d'argent et visualiser son budget mensuel avec des graphiques clairs." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('finanza_theme_v2') || localStorage.getItem('finanza_theme_mode');
+          if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+          var savedAccent = localStorage.getItem('finanza_accent_v2') || localStorage.getItem('finanza_accent_color') || 'blue';
+          document.documentElement.setAttribute('data-accent', savedAccent);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-teal-100 selection:text-teal-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

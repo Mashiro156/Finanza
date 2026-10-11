@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+
+@layer base {
+  :root {
+    --accent-color: #0284c7;
+    --accent-hover: #0369a1;
+    --accent-light: #f0f9ff;
+    --accent-border: #bae6fd;
+    --accent-text: #0369a1;
+    --accent-ring: rgba(2, 132, 199, 0.25);
+    --hero-from: #e0f2fe;
+    --hero-via: #e0f7fa;
+    --hero-to: #f0fdf4;
+    --hero-border: #bae6fd;
+    --hero-text: #075985;
+  }
+
+  [data-accent="teal"] {
+    --accent-color: #0d9488;
+    --accent-hover: #0f766e;
+    --accent-light: #f0fdfa;
+    --accent-border: #99f6e4;
+    --accent-text: #0f766e;
+    --accent-ring: rgba(13, 148, 136, 0.25);
+    --hero-from: #c4f4e7;
+    --hero-via: #d2f8ee;
+    --hero-to: #e4fcf6;
+    --hero-border: #a7ebd8;
+    --hero-text: #115e59;
+  }
+
+  [data-accent="indigo"] {
+    --accent-color: #4f46e5;
+    --accent-hover: #4338ca;
+    --accent-light: #eef2ff;
+    --accent-border: #c7d2fe;
+    --accent-text: #4338ca;
+    --accent-ring: rgba(79, 70, 229, 0.25);
+    --hero-from: #e0e7ff;
+    --hero-via: #ede9fe;
+    --hero-to: #f5f3ff;
+    --hero-border: #c7d2fe;
+    --hero-text: #3730a3;
+  }
+
+  [data-accent="violet"] {
+    --accent-color: #7c3aed;
+    --accent-hover: #6d28d9;
+    --accent-light: #f5f3ff;
+    --accent-border: #ddd6fe;
+    --accent-text: #6d28d9;
+    --accent-ring: rgba(124, 58, 237, 0.25);
+    --hero-from: #ede9fe;
+    --hero-via: #f3e8ff;
+    --hero-to: #fae8ff;
+    --hero-border: #ddd6fe;
+    --hero-text: #5b21b6;
+  }
+
+  [data-accent="rose"] {
+    --accent-color: #e11d48;
+    --accent-hover: #be123c;
+    --accent-light: #fff1f2;
+    --accent-border: #fecdd3;
+    --accent-text: #be123c;
+    --accent-ring: rgba(225, 29, 72, 0.25);
+    --hero-from: #ffe4e6;
+    --hero-via: #fce7f3;
+    --hero-to: #fdf2f8;
+    --hero-border: #fecdd3;
+    --hero-text: #9f1239;
+  }
+
+  [data-accent="amber"] {
+    --accent-color: #d97706;
+    --accent-hover: #b45309;
+    --accent-light: #fffbeb;
+    --accent-border: #fde68a;
+    --accent-text: #b45309;
+    --accent-ring: rgba(217, 119, 6, 0.25);
+    --hero-from: #fef3c7;
+    --hero-via: #ffedd5;
+    --hero-to: #fff7ed;
+    --hero-border: #fde68a;
+    --hero-text: #92400e;
+  }
+
+  [data-accent="blue"] {
+    --accent-color: #0284c7;
+    --accent-hover: #0369a1;
+    --accent-light: #f0f9ff;
+    --accent-border: #bae6fd;
+    --accent-text: #0369a1;
+    --accent-ring: rgba(2, 132, 199, 0.25);
+    --hero-from: #e0f2fe;
+    --hero-via: #e0f7fa;
+    --hero-to: #f0fdf4;
+    --hero-border: #bae6fd;
+    --hero-text: #075985;
+  }
+
+  .dark, [data-theme="dark"] {
+    color-scheme: dark;
+    --hero-from: #0f172a;
+    --hero-via: #1e293b;
+    --hero-to: #0f172a;
+    --hero-border: #334155;
+    --hero-text: #f1f5f9;
+  }
+
+  .dark[data-accent="teal"], .dark [data-accent="teal"], [data-accent="teal"].dark {
+    --accent-light: rgba(13, 148, 136, 0.22);
+    --accent-border: rgba(13, 148, 136, 0.5);
+    --accent-text: #2dd4bf;
+  }
+  .dark[data-accent="indigo"], .dark [data-accent="indigo"], [data-accent="indigo"].dark {
+    --accent-light: rgba(79, 70, 229, 0.22);
+    --accent-border: rgba(79, 70, 229, 0.5);
+    --accent-text: #818cf8;
+  }
+  .dark[data-accent="violet"], .dark [data-accent="violet"], [data-accent="violet"].dark {
+    --accent-light: rgba(124, 58, 237, 0.22);
+    --accent-border: rgba(124, 58, 237, 0.5);
+    --accent-text: #a78bfa;
+  }
+  .dark[data-accent="rose"], .dark [data-accent="rose"], [data-accent="rose"].dark {
+    --accent-light: rgba(225, 29, 72, 0.22);
+    --accent-border: rgba(225, 29, 72, 0.5);
+    --accent-text: #fb7185;
+  }
+  .dark[data-accent="amber"], .dark [data-accent="amber"], [data-accent="amber"].dark {
+    --accent-light: rgba(217, 119, 6, 0.22);
+    --accent-border: rgba(217, 119, 6, 0.5);
+    --accent-text: #fbbf24;
+  }
+  .dark[data-accent="blue"], .dark [data-accent="blue"], [data-accent="blue"].dark {
+    --accent-light: rgba(2, 132, 199, 0.22);
+    --accent-border: rgba(2, 132, 199, 0.5);
+    --accent-text: #38bdf8;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .font-mono-numbers {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom dynamic accent utility classes that immediately react to accent changes */
+.bg-accent {
+  background-color: var(--accent-color) !important;
+}
+.bg-accent-hover:hover,
+button.bg-accent:hover {
+  background-color: var(--accent-hover) !important;
+}
+.text-accent {
+  color: var(--accent-color) !important;
+}
+.text-accent-themed {
+  color: var(--accent-text) !important;
+}
+.border-accent {
+  border-color: var(--accent-border) !important;
+}
+.bg-accent-light {
+  background-color: var(--accent-light) !important;
+}
+.ring-accent {
+  --tw-ring-color: var(--accent-color) !important;
+}
+.shadow-accent {
+  box-shadow: 0 10px 25px -5px var(--accent-ring), 0 8px 10px -6px var(--accent-ring) !important;
+}
+
+/* Hide scrollbars across the application while preserving smooth scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Also hide global window scrollbar when preferred */
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
+}
+body, html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
