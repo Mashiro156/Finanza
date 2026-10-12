@@ -21,6 +21,7 @@ import { TutorialModal } from "./components/TutorialModal";
 import { TutorialPromptModal } from "./components/TutorialPromptModal";
 import { InteractiveSpotlightTour } from "./components/InteractiveSpotlightTour";
 import { TourSuggestionPrompt } from "./components/TourSuggestionPrompt";
+import { OfflineIndicator } from "./components/OfflineIndicator";
 
 function MainAppContent() {
   const {
@@ -69,6 +70,7 @@ function MainAppContent() {
       <TutorialPromptModal />
       <InteractiveSpotlightTour />
       <TourSuggestionPrompt />
+      <OfflineIndicator />
     </>
   );
 }

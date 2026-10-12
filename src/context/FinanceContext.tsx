@@ -916,7 +916,7 @@ export const FinanceProvider: React.FC<{ children: React.ReactNode }> = ({
     } catch {}
   };
 
-  // Delete all user data and transactions (clear transactions and goals of active profile)
+  // Delete all user data, transactions and erase monthly budget caps
   const clearAllUserData = () => {
     setTransactionsByProfile((prev) => ({
       ...prev,
@@ -926,6 +926,19 @@ export const FinanceProvider: React.FC<{ children: React.ReactNode }> = ({
       ...prev,
       [activeProfileId]: [],
     }));
+    // Reset all category monthly budgets (plafonds mensuels budgétaires par catégorie) to 0
+    setCategories((prev) => {
+      const updated = prev.map((cat) => ({
+        ...cat,
+        budgetMonthly: 0,
+      }));
+      try {
+        localStorage.setItem(STORAGE_KEYS.CATEGORIES, JSON.stringify(updated));
+      } catch {}
+      return updated;
+    });
+    // Reset global monthly budget cap of active profile to 0
+    updateUser({ monthlyBudgetCap: 0 });
   };
 
   // Computed metrics based on the active profile's transactions

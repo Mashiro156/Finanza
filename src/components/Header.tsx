@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useFinance } from "../context/FinanceContext";
 import { Sun, Moon, Info } from "lucide-react";
+import { PWAInstallButton } from "./PWAInstallButton";
 
 export const Header: React.FC = () => {
   const { user, setIsAvatarModalOpen, themeMode, toggleThemeMode, startTour } = useFinance();
@@ -66,6 +67,8 @@ export const Header: React.FC = () => {
         >
           {themeMode === "dark" ? <Sun size={15} /> : <Moon size={15} />}
         </button>
+
+        <PWAInstallButton variant="compact" />
 
         <button
           onClick={() => setIsAvatarModalOpen(true)}

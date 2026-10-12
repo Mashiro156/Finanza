@@ -50,10 +50,10 @@ export const DemoDataBanner: React.FC = () => {
           </div>
           <div className="min-w-0">
             <span className="text-xs font-bold block truncate text-slate-900 dark:text-white">
-              Transactions préécrites
+              Transactions & Plafonds préécrits
             </span>
             <span className="text-[10px] text-slate-500 dark:text-slate-400 block truncate -mt-0.5">
-              Supprimer les données exemples pour démarrer à zéro ?
+              Supprimer les données exemples et réinitialiser les plafonds à zéro ?
             </span>
           </div>
         </div>
@@ -62,7 +62,7 @@ export const DemoDataBanner: React.FC = () => {
           <button
             onClick={handleClearDemoData}
             className="px-2.5 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 active:scale-95 text-white text-[11px] font-bold shadow-xs transition-all flex items-center gap-1 cursor-pointer"
-            title="Supprimer directement toutes les transactions préécrites"
+            title="Supprimer les transactions préécrites et réinitialiser les plafonds budgétaires"
           >
             <Trash2 size={12} />
             <span>Supprimer</span>

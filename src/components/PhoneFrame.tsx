@@ -1,6 +1,7 @@
 import React from "react";
 import { useFinance } from "../context/FinanceContext";
 import { Wifi, Battery, Smartphone, Monitor, Sun, Moon } from "lucide-react";
+import { PWAInstallButton } from "./PWAInstallButton";
 
 interface PhoneFrameProps {
   children: React.ReactNode;
@@ -37,6 +38,8 @@ export const PhoneFrame: React.FC<PhoneFrameProps> = ({ children }) => {
               {themeMode === "dark" ? <Sun size={14} className="text-amber-400" /> : <Moon size={14} />}
               <span>{themeMode === "dark" ? "Mode Clair" : "Mode Sombre"}</span>
             </button>
+
+            <PWAInstallButton variant="compact" />
 
             <button
               onClick={() => setViewMode("mockup")}

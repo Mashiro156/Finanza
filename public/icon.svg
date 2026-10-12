@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="markGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#082f49" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+
+  <!-- Subtle glow inner contour -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4" />
+
+  <!-- Finanza Modern Emblem (F + Wallet + Upward Growth) -->
+  <g filter="url(#shadow)" transform="translate(106, 96)">
+    <!-- Main vertical bar of F -->
+    <rect x="20" y="30" width="56" height="260" rx="28" fill="url(#markGrad)" />
+
+    <!-- Top horizontal bar with growth arrow tip -->
+    <rect x="20" y="30" width="220" height="56" rx="28" fill="url(#markGrad)" />
+    <!-- Top-right upward coin/dot indicator -->
+    <circle cx="260" cy="58" r="28" fill="#facc15" />
+
+    <!-- Middle bar with financial curve -->
+    <rect x="20" y="140" width="160" height="52" rx="26" fill="url(#markGrad)" />
+
+    <!-- Dynamic swoosh / trend curve -->
+    <path d="M 96 270 C 160 270, 240 220, 260 140" fill="none" stroke="#e0f2fe" stroke-width="32" stroke-linecap="round" />
+  </g>
+</svg>

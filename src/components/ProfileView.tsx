@@ -28,6 +28,7 @@ import {
   Info,
   Compass,
 } from "lucide-react";
+import { PWAInstallButton } from "./PWAInstallButton";
 
 export const ProfileView: React.FC = () => {
   const {
@@ -614,6 +615,9 @@ export const ProfileView: React.FC = () => {
           </button>
         )}
       </form>
+
+      {/* PWA App Installation Card */}
+      <PWAInstallButton variant="card" />
 
       {/* Data Management & CSV Export/Import */}
       <div
